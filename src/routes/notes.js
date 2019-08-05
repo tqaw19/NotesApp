@@ -54,6 +54,5 @@ router.delete('/notes/delete/:id', async (req, res) => {
     res.redirect('/notes');
 });
 
-//FROM SIGN IN - SIGN UP PART ON !!
 
 module.exports = router;
