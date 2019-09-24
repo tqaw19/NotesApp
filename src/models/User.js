@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
+
 const bcrypt = require('bcryptjs');
 
 const UserSchema = new Schema({
@@ -15,8 +16,13 @@ UserSchema.methods.encryptPassword = async (password) => {
     return hash;
 }
 
-UserSchema.methods.matchPasswords = async function (password) {
+UserSchema.methods.matchPassword = async function (password) {
     return await bcrypt.compare(password, this.password);
-}
+};
 
 module.exports = mongoose.model('User', UserSchema);
+
+//Navigation 
+/**
+ * From Logout and protection Routes
+ */
