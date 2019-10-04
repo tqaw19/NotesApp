@@ -24,5 +24,5 @@ module.exports = mongoose.model('User', UserSchema);
 
 //Navigation 
 /**
- * From Logout and protection Routes
+ * From Logout and protection Routes - Final Part
  */
